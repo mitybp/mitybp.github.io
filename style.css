@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', system-ui;
+}
+
+header{
+    text-align: center;
+    padding: 60px 20px;
+}
+header a{
+    background-color: #e2338a;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+header a:hover{
+    background-color: #e34d98;
+    transition: 0.2s;
+}
+header img{
+    width: 150px;
+    border-radius: 8px;
+}
+main{
+    display: flex;
+    align-items: start;
+    justify-content: space-evenly;
+}
+main div{
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+main div h2 a{
+    color: #444;
+}
+main div:hover{
+    border-color: #e2338a;
+    transition: 0.2s;
+    cursor: pointer;
+}
+main div:hover :where(h2 a, p){
+    color: #e2338a;
+    transition: 0.2s;
+}
