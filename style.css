@@ -1,50 +1,141 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', system-ui;
+    font-family: 'Quicksand', system-ui;
 }
 
-header{
-    text-align: center;
-    padding: 60px 20px;
+::selection {
+    background-color: #773bee7b;
 }
-header a{
-    background-color: #e2338a;
+
+html {
+    scroll-behavior: smooth !important;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #6b3bcb;
+    border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #773bee;
+}
+
+body {
+    background-color: #0d1018;
+    margin: 20px 26%;
     color: #fff;
-    padding: 8px 16px;
-    border-radius: 4px;
+    transition: 0.2s all ease-in-out;
+
+    @media (max-width: 800px) {
+        margin: 10px;
+    }
+}
+
+hr {
+    height: 2px;
+    border: none;
+    background: #fff;
+    border-radius: 2px;
+    margin-block: 30px;
+}
+
+a {
+    color: #6b3bcb;
     text-decoration: none;
-}
-header a:hover{
-    background-color: #e34d98;
     transition: 0.2s;
+
+    &:hover {
+        color: #773bee;
+    }
+
+    &.button {
+        background-color: #6b3bcb;
+        color: #fff;
+        padding: 6px 16px;
+        border-radius: 4px;
+
+        &:hover {
+            background-color: #773bee;
+        }
+    }
 }
-header img{
-    width: 150px;
-    border-radius: 8px;
+
+h1, h2, h3, h4, h5, h6 {
+    margin-block: 4px 6px;
 }
-main{
+
+h1.title {
+    font-size: 3rem;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background-color: #0d10187b;
     display: flex;
-    align-items: start;
-    justify-content: space-evenly;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    backdrop-filter: blur(12px);
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
 }
-main div{
-    padding: 30px;
-    border: 1px solid #ccc;
+
+nav a img {
+    width: 40px;
     border-radius: 8px;
 }
-main div h2 a{
-    color: #444;
+
+main {
+    margin-top: 70px;
 }
-main div:hover{
-    border-color: #e2338a;
-    transition: 0.2s;
-    cursor: pointer;
+
+span {
+    color: #9767f8;
 }
-main div:hover :where(h2 a, p){
-    color: #e2338a;
-    transition: 0.2s;
+
+div.flex {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-block: 10px;
+}
+
+div.grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: space-evenly;
+
+    @media (max-width: 450px) {
+        grid-template-columns: 100%;
+    }
+}
+
+div.card {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #6b3bcb;
+}
+
+div.card a {
+    color: #fff;
 }
