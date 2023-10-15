@@ -1,141 +1,102 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Quicksand', system-ui;
+    font-family: 'Fira Code', system-ui;
 }
 
 ::selection {
     background-color: #773bee7b;
 }
 
-html {
-    scroll-behavior: smooth !important;
-}
-
-::-webkit-scrollbar {
-    width: 6px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #6b3bcb;
-    border-radius: 3px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #773bee;
-}
 
 body {
     background-color: #0d1018;
-    margin: 20px 26%;
+    margin: 40px 30%;
     color: #fff;
-    transition: 0.2s all ease-in-out;
-
-    @media (max-width: 800px) {
-        margin: 10px;
-    }
-}
-
-hr {
-    height: 2px;
-    border: none;
-    background: #fff;
-    border-radius: 2px;
-    margin-block: 30px;
-}
-
-a {
-    color: #6b3bcb;
-    text-decoration: none;
-    transition: 0.2s;
-
-    &:hover {
-        color: #773bee;
-    }
-
-    &.button {
-        background-color: #6b3bcb;
-        color: #fff;
-        padding: 6px 16px;
-        border-radius: 4px;
-
-        &:hover {
-            background-color: #773bee;
-        }
-    }
-}
-
-h1, h2, h3, h4, h5, h6 {
-    margin-block: 4px 6px;
-}
-
-h1.title {
-    font-size: 3rem;
-}
-
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: 10px;
-    background-color: #0d10187b;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 30px;
-    backdrop-filter: blur(12px);
-    border-bottom-right-radius: 8px;
-    border-bottom-left-radius: 8px;
-}
-
-nav a img {
-    width: 40px;
-    border-radius: 8px;
-}
-
-main {
-    margin-top: 70px;
 }
 
 span {
-    color: #9767f8;
+    color: #773bee;
 }
 
-div.flex {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-block: 10px;
-}
+a {
+    color: #fff;
+    text-decoration: underline 2px #773bee;
+    transition: 0.1s;
 
-div.grid {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    justify-content: space-evenly;
-
-    @media (max-width: 450px) {
-        grid-template-columns: 100%;
+    &:hover {
+        text-decoration-color: #5a24c4;
     }
 }
 
-div.card {
-    margin: 10px;
-    padding: 10px;
-    border-radius: 8px;
-    border: 2px solid #6b3bcb;
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-div.card a {
+header div.icons {
+    display: flex;
+    gap: 10px;
+}
+
+header div.icons a{
+    padding: 8px;
+    background-color: #5a24c4;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header div.icons a i {
     color: #fff;
+    font-size: 18px;
+}
+
+main h3{
+    padding-block: 20px;
+}
+
+main div.grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main div.grid a {
+    width: 50%;
+    padding: 10px;
+    border-radius: 4px;
+    &:hover{
+        background-color: #090911;
+    }
+}
+
+
+
+@media (max-width: 1030px) {
+    body {
+        margin: 40px 80px;
+    }
+}
+@media (max-width: 550px) {
+    body{
+        margin: 20px;
+    }
+    main div.grid a{
+        width: 100%;
+    }
+    header div.icons{
+        position: absolute;
+        top: 5px;
+        right: 5px;
+    }
+    header div.info h1{
+        font-size: 1.4rem;
+    }
 }
