@@ -8,18 +8,13 @@
 }
 
 ::selection {
-    background-color: #773bee7b;
+    background-color: #773bee37;
 }
-
 
 body {
     background-color: #0d1018;
     margin: 40px 30%;
     color: #fff;
-}
-
-span {
-    color: #773bee;
 }
 
 a {
@@ -39,45 +34,9 @@ header {
     justify-content: space-between;
 }
 
-header div.icons {
-    display: flex;
-    gap: 10px;
+main{
+    margin-top: 20px;
 }
-
-header div.icons a{
-    padding: 8px;
-    background-color: #5a24c4;
-    width: 40px;
-    height: 40px;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-header div.icons a i {
-    color: #fff;
-    font-size: 18px;
-}
-
-main h3{
-    padding-block: 20px;
-}
-
-main div.grid {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-main div.grid a {
-    width: 50%;
-    padding: 10px;
-    border-radius: 4px;
-    &:hover{
-        background-color: #090911;
-    }
-}
-
-
 
 @media (max-width: 1030px) {
     body {
@@ -87,14 +46,6 @@ main div.grid a {
 @media (max-width: 550px) {
     body{
         margin: 20px;
-    }
-    main div.grid a{
-        width: 100%;
-    }
-    header div.icons{
-        position: absolute;
-        top: 5px;
-        right: 5px;
     }
     header div.info h1{
         font-size: 1.4rem;
